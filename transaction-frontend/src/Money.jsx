@@ -160,7 +160,7 @@ class Money extends React.Component {
                         {this.state.signup && <input onChange={this.onInputChange('email')} type="email" placeholder='Email Address'/>}
                         <input onChange={this.onInputChange('password')} type="password" placeholder='Password'/>
                         {this.state.attemptingAuth ? <div className="loader"></div> : <button className='auth-button'>{!this.state.signup ? 'LOGIN' : 'REGISTER'}</button>}
-                        <p style={{textAlign : 'center'}}>{this.state.signup ? 'Already have an account ?' : "Don't have an account ?"} <button style={{fontSize : '17px', color : '#d1d1d1'}} onClick = {() => this.setState({signup : !this.state.signup, authError : ''})} type='button'>{this.state.signup ? 'Login' : 'Register'}</button></p>
+                        <p style={{textAlign : 'center'}}>{this.state.signup ? 'Already have an account ?' : "Don't have an account ?"} <button style={{fontSize : '17px', color : '#0d6e46'}} onClick = {() => this.setState({signup : !this.state.signup, authError : ''})} type='button'>{this.state.signup ? 'Login' : 'Register'}</button></p>
                         {this.state.authError && <p className="error">{this.state.authError}</p>}
                         {this.state.authSuccess && <p className="success">{this.state.authSuccess}</p>}
                     </form>
@@ -175,7 +175,7 @@ class Money extends React.Component {
                     <button onClick={this.logout} className='btnLogout'>Log Out</button>
                     <section className="details-box">
                         <header className='balance-text'>CURRENT BALANCE</header>
-                        <p className='balance'>e{balance}</p>
+                        <p className='balance'>${balance}</p>
                         <hr/>
                         <div className='sendSection'>
                             <button onClick = {() => this.setState({sending : true})} className='sendBtn' id='sendBtn'>
