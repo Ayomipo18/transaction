@@ -9,7 +9,7 @@ const SingleTransaction = ({type, name, amount, date}) => {
                 <p className='transDate'>{new Date(date).toDateString() + ' ' + new Date(date).toLocaleString('en-US', {minute : 'numeric', hour : 'numeric'})}</p>
             </div>
             <div>
-                <p style={{color : type === 'credit' ? 'rgb(8, 75, 8)' : 'rgb(99, 14, 14)'}} className='transAmount'>e{amount}</p>
+                <p style={{color : type === 'credit' ? 'rgb(8, 75, 8)' : 'rgb(99, 14, 14)'}} className='transAmount'>${amount}</p>
             </div>
         </div>
     )
